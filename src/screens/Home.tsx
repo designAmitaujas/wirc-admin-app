@@ -62,9 +62,10 @@ const chartConfig = {
 const OngoingCard: React.FC<{
   name: string;
   duration: string;
-  datetime: string;
+  startdatetime: string;
+  enddatetime: string;
   vanue: string;
-}> = ({ name, duration, datetime, vanue }) => {
+}> = ({ name, duration, startdatetime, enddatetime, vanue }) => {
   return (
     <>
       <VStack
@@ -83,6 +84,7 @@ const OngoingCard: React.FC<{
           fontSize={"lg"}
           color={"amber.600"}
           alignSelf={"center"}
+          textAlign={"center"}
         >
           {name}
         </Text>
@@ -98,7 +100,13 @@ const OngoingCard: React.FC<{
             Date & Time
           </Text>
           <Text w={"5%"}>:</Text>
-          <Text w={"65%"}>{datetime}</Text>
+          <VStack>
+            <HStack space={3}>
+              <Text>{startdatetime}</Text>
+              <Text>to</Text>
+            </HStack>
+            <Text>{enddatetime}</Text>
+          </VStack>
         </HStack>
         <HStack w={"100%"}>
           <Text color={"gray.500"} fontWeight={"semibold"} w={"30%"}>
@@ -115,9 +123,10 @@ const OngoingCard: React.FC<{
 const UpcomingCard: React.FC<{
   name: string;
   duration: string;
-  datetime: string;
+  startdatetime: string;
+  enddatetime: string;
   vanue: string;
-}> = ({ name, duration, datetime, vanue }) => {
+}> = ({ name, duration, startdatetime, enddatetime, vanue }) => {
   return (
     <>
       <VStack
@@ -136,6 +145,7 @@ const UpcomingCard: React.FC<{
           fontSize={"lg"}
           color={"darkBlue.300"}
           alignSelf={"center"}
+          textAlign={"center"}
         >
           {name}
         </Text>
@@ -151,7 +161,13 @@ const UpcomingCard: React.FC<{
             Date & Time
           </Text>
           <Text w={"5%"}>:</Text>
-          <Text w={"65%"}>{datetime}</Text>
+          <VStack>
+            <HStack space={3}>
+              <Text>{startdatetime}</Text>
+              <Text>to</Text>
+            </HStack>
+            <Text>{enddatetime}</Text>
+          </VStack>
         </HStack>
         <HStack w={"100%"}>
           <Text color={"gray.500"} fontWeight={"semibold"} w={"30%"}>
@@ -270,7 +286,7 @@ const HomeScreen = () => {
           <VStack space={4} pl={4} pr={4} pb={4}>
             <HStack alignItems={"center"} space={2}>
               <Text fontWeight={"semibold"} fontSize={"xl"} color={"gray.400"}>
-                Ongoing Seminar
+                Ongoing Events
               </Text>
               {/* <Box h={6} w={6}>
               <LottieView
@@ -285,20 +301,23 @@ const HomeScreen = () => {
                 <OngoingCard
                   name="Direct Tax Refresher Course (Physical)"
                   duration="40 Minute"
-                  datetime="20-06-2023, 7:30 AM"
+                  startdatetime="20-06-2023, 7:30 AM"
+                  enddatetime="22-06-2023, 9:30 AM"
                   vanue="Nakshtra Party Ploat Harni, Vadodara - 360002"
                 />
                 <OngoingCard
                   name="Two days Workshop on Excel Skills for Real World Business
                   Operations"
                   duration="45 Minute"
-                  datetime="26-06-2023, 11:00 AM"
+                  startdatetime="20-06-2023, 7:30 AM"
+                  enddatetime="22-06-2023, 9:30 AM"
                   vanue="NarayanWadi Atladara, Vadodara - 360002"
                 />
                 <OngoingCard
                   name="Tech Edge Series (Virtual)"
                   duration="45 Minute"
-                  datetime="26-06-2023, 11:00 AM"
+                  startdatetime="20-06-2023, 7:30 AM"
+                  enddatetime="22-06-2023, 9:30 AM"
                   vanue="NarayanWadi Atladara, Vadodara - 360002"
                 />
               </HStack>
@@ -350,6 +369,7 @@ const HomeScreen = () => {
                   Direct Tax Refresher Course (Physical)
                 </Text>
               </VStack>
+
               <VStack bg={"white"} borderRadius={16} w={"96"}>
                 <PieChart
                   data={data1}
@@ -402,7 +422,7 @@ const HomeScreen = () => {
           <VStack space={4} p={4}>
             <HStack alignItems={"center"} space={3}>
               <Text fontWeight={"semibold"} fontSize={"xl"} color={"gray.400"}>
-                Upcoming Seminar
+                Upcoming Events
               </Text>
             </HStack>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -410,19 +430,22 @@ const HomeScreen = () => {
                 <UpcomingCard
                   name="Direct Tax Refresher Course (Physical)"
                   duration="12 Hour"
-                  datetime="10-06-2023, 7:30 AM"
+                  startdatetime="20-06-2023, 7:30 AM"
+                  enddatetime="22-06-2023, 9:30 AM"
                   vanue="Yogi Sabhagruh, Dadar (E), Mumbai"
                 />
                 <UpcomingCard
                   name="Two days Workshop on Excel Skills for Real World Business Operations"
                   duration="12 Hour"
-                  datetime="23-06-2023, 10:00 AM"
+                  startdatetime="20-06-2023, 7:30 AM"
+                  enddatetime="22-06-2023, 9:30 AM"
                   vanue="RVG Hostel, Near Lallubhai Park, Andheri west."
                 />
                 <UpcomingCard
                   name="Tech Edge Series (Virtual)"
                   duration="12 Hour"
-                  datetime="23-06-2023 4:00 PM"
+                  startdatetime="20-06-2023, 7:30 AM"
+                  enddatetime="22-06-2023, 9:30 AM"
                   vanue="	Virtual Mode"
                 />
               </HStack>
