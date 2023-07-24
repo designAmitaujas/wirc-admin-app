@@ -446,7 +446,7 @@ const HomeScreen = () => {
                   duration="12 Hour"
                   startdatetime="20-06-2023, 7:30 AM"
                   enddatetime="22-06-2023, 9:30 AM"
-                  vanue="	Virtual Mode"
+                  vanue="Virtual Mode"
                 />
               </HStack>
             </ScrollView>
