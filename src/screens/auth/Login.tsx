@@ -4,6 +4,7 @@ import {
   Box,
   HStack,
   Icon,
+  IconButton,
   Image,
   Link,
   ScrollView,
@@ -31,6 +32,8 @@ const validationSchema = Yup.object().shape({
 
 const Login = () => {
   const { navigate } = useNavigation();
+  const [show, setShow] = useState(false);
+  const handleClick = () => setShow(!show);
 
   const handleSubmit = () => {
     // @ts-ignore
@@ -102,13 +105,13 @@ const Login = () => {
                     color={"gray.500"}
                     alignSelf={"center"}
                   >
-                    Log In
+                    Login
                   </Text>
 
                   <VStack space={2} alignSelf={"center"} mt={"5"}>
                     <CustomInput
                       w={"72"}
-                      borderColor={"darkBlue.300"}
+                      borderColor={"#0f045d"}
                       name="email"
                       label="Email Address"
                       currentValue={values.email}
@@ -123,15 +126,15 @@ const Login = () => {
                           name="user"
                           size={4}
                           ml="3"
-                          color="darkBlue.300"
+                          color="#0f045d"
                         />
                       }
                       bgColor="white"
                     />
                     <CustomInput
-                      secureTextEntry={true}
+                      // secureTextEntry={true}
                       isRequired={true}
-                      borderColor={"darkBlue.300"}
+                      borderColor={"#0f045d"}
                       w={"72"}
                       name="password"
                       label="Password"
@@ -141,48 +144,54 @@ const Login = () => {
                       setFieldValue={setFieldValue}
                       bgColor="white"
                       isInvalid={!!touched.password && !!errors.password}
+                      type={show ? "text" : "password"}
                       leftElement={
                         <Icon
                           as={Ionicons}
                           name="key-outline"
                           size={5}
                           ml="3"
-                          color="darkBlue.300"
+                          color="#0f045d"
+                        />
+                      }
+                      rightElement={
+                        <IconButton
+                          mr={0.5}
+                          borderRadius={10}
+                          onPress={handleClick}
+                          icon={
+                            show ? (
+                              <Icon
+                                as={Ionicons}
+                                name="eye"
+                                size={5}
+                                color="#0f045d"
+                              />
+                            ) : (
+                              <Icon
+                                as={Ionicons}
+                                name="eye-off"
+                                size={5}
+                                color="#0f045d"
+                              />
+                            )
+                          }
                         />
                       }
                     />
-                    {/* <HStack alignItems={"center"} marginLeft={-4}>
-                        <Switch size="sm" colorScheme={"coolGray"}></Switch>
-                        <Text>Remember Me</Text>
-                      </HStack> */}
-                    {/* <Link
-                        alignSelf={"flex-end"}
-                        onPress={Forgot}
-                        _text={{
-                          color: "#313031",
-                          fontWeight: "medium",
-                          fontSize: "sm",
-                          textDecoration: "none",
-                        }}
-                      >
-                        Forgot Password ?
-                      </Link> */}
 
-                    {/* <Button
-                        mt="6"
-                        borderRadius={25}
-                        w={"48"}
-                        h={12}
-                        alignSelf={"center"}
-                        bgColor={"#313031"}
-                        shadow={"2"}
-                        //@ts-ignore
-                        onPress={handleSubmit}
-                        leftIcon={isSubmitting === true ? <Spinner /> : null}
-                        isSubmitting={isSubmitting}
-                      >
-                        Log In
-                      </Button> */}
+                    <Link
+                      alignSelf={"flex-end"}
+                      onPress={Forgot}
+                      _text={{
+                        color: "#313031",
+                        fontWeight: "medium",
+                        fontSize: "sm",
+                        textDecoration: "none",
+                      }}
+                    >
+                      Forgot Password ?
+                    </Link>
 
                     <CustomButton
                       name="Login"
@@ -192,7 +201,7 @@ const Login = () => {
                       h={12}
                       onPress={handleLogin}
                       alignSelf={"center"}
-                      bg={"darkBlue.300"}
+                      bg={"#0f045d"}
                       colorScheme={"white"}
                       leftIcon={
                         <Icon as={FontAwesome5} name="lock" mr="1" size="sm" />
@@ -201,14 +210,14 @@ const Login = () => {
                       onSubmit={handleSubmit}
                     />
 
-                    <HStack justifyContent={"center"} mt={2} space={2}>
+                    {/* <HStack justifyContent={"center"} mt={2} space={2}>
                       <Text fontSize={16} color={"gray.500"}>
                         Login with
                       </Text>
                       <Link
                         onPress={Mobile}
                         _text={{
-                          color: "darkBlue.300",
+                          color: "#0f045d",
                           fontWeight: "semibold",
                           fontSize: "16",
                           textDecoration: "none",
@@ -216,7 +225,7 @@ const Login = () => {
                       >
                         Mobile Number
                       </Link>
-                    </HStack>
+                    </HStack> */}
                     {/* <HStack justifyContent="center" mt={"5"} mb={"3"}>
                         <Text
                           fontSize="sm"

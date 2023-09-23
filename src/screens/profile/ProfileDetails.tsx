@@ -49,7 +49,7 @@ const RestHeader = () => {
   };
   return (
     <HStack
-      backgroundColor="darkBlue.300"
+      backgroundColor="#0f045d"
       borderRadius={25}
       py="2"
       space={5}
@@ -123,7 +123,7 @@ const ProfileScreen = () => {
                     <VStack space={1} mt={5} mb={3} alignSelf={"center"}>
                       {/* <Avatar
                         borderWidth={2}
-                        borderColor={"darkBlue.300"}
+                        borderColor={"#0f045d"}
                         bg="white"
                         alignSelf={"center"}
                         mb={3}
@@ -134,7 +134,7 @@ const ProfileScreen = () => {
                       /> */}
                       <Image
                         borderWidth={2}
-                        borderColor={"darkBlue.300"}
+                        borderColor={"#0f045d"}
                         alignSelf={"center"}
                         borderRadius={"full"}
                         mb={3}
@@ -146,7 +146,7 @@ const ProfileScreen = () => {
                       />
                       <CustomInput
                         w={"72"}
-                        borderColor={"darkBlue.300"}
+                        borderColor={"#0f045d"}
                         bgColor={"white"}
                         currentValue={values.name}
                         errMsg={errors.name}
@@ -161,7 +161,7 @@ const ProfileScreen = () => {
 
                       <CustomInput
                         w={"72"}
-                        borderColor={"darkBlue.300"}
+                        borderColor={"#0f045d"}
                         bgColor={"white"}
                         currentValue={values.email}
                         errMsg={errors.email}
@@ -177,7 +177,7 @@ const ProfileScreen = () => {
                       <CustomInput
                         w={"72"}
                         keyboardType="numeric"
-                        borderColor={"darkBlue.300"}
+                        borderColor={"#0f045d"}
                         bgColor={"white"}
                         currentValue={values.mobilenumber}
                         errMsg={errors.mobilenumber}
@@ -212,7 +212,7 @@ const ProfileScreen = () => {
                         alignSelf={"center"}
                         placeholder="Select State"
                         borderRadius={12}
-                        borderColor={"darkBlue.300"}
+                        borderColor={"#0f045d"}
                         value={values.state}
                         isInvalid={!!touched.state && !!errors.state}
                         onValueChange={handleChange("state")}
@@ -256,7 +256,7 @@ const ProfileScreen = () => {
                         alignSelf={"center"}
                         placeholder="Select City"
                         borderRadius={12}
-                        borderColor={"darkBlue.300"}
+                        borderColor={"#0f045d"}
                         value={values.city}
                         isInvalid={!!touched.city && !!errors.city}
                         onValueChange={handleChange("city")}
@@ -289,7 +289,7 @@ const ProfileScreen = () => {
                           <Entypo
                             name="chevron-small-down"
                             size={30}
-                            color="#64B5F6"
+                            color="#0f045d"
                             style={{ marginRight: 10 }}
                           />
                         }
@@ -298,7 +298,7 @@ const ProfileScreen = () => {
                         alignSelf={"center"}
                         placeholder="Select State"
                         borderRadius={12}
-                        borderColor={"darkBlue.300"}
+                        borderColor={"#0f045d"}
                         bg={"white"}
                         // @ts-ignore
                         errMsg={errors.state}
@@ -310,7 +310,7 @@ const ProfileScreen = () => {
                             <Feather
                               name="check"
                               size={18}
-                              color="#64B5F6"
+                              color="#0f045d"
                               style={{ marginTop: 2 }}
                             />
                           ),
@@ -334,7 +334,7 @@ const ProfileScreen = () => {
                           <Entypo
                             name="chevron-small-down"
                             size={30}
-                            color="#64B5F6"
+                            color="#0f045d"
                             style={{ marginRight: 10 }}
                           />
                         }
@@ -343,7 +343,7 @@ const ProfileScreen = () => {
                         alignSelf={"center"}
                         placeholder="Select City"
                         borderRadius={12}
-                        borderColor={"darkBlue.300"}
+                        borderColor={"#0f045d"}
                         bg={"white"}
                         // @ts-ignore
                         errMsg={errors.city}
@@ -355,7 +355,7 @@ const ProfileScreen = () => {
                             <Feather
                               name="check"
                               size={18}
-                              color="#64B5F6"
+                              color="#0f045d"
                               style={{ marginTop: 2 }}
                             />
                           ),
@@ -381,7 +381,7 @@ const ProfileScreen = () => {
                         size={"lg"}
                         w={"40"}
                         alignSelf={"center"}
-                        bgColor={"darkBlue.300"}
+                        bgColor={"#0f045d"}
                         //@ts-ignore
                         onPress={handleSubmit}
                       >

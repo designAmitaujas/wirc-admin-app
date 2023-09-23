@@ -131,7 +131,7 @@ const MobileLogin = () => {
                     isInvalid={!!touched.mobileNo && !!errors.mobileNo}
                     isRequired={true}
                     w={"72"}
-                    borderColor={"darkBlue.300"}
+                    borderColor={"#0f045d"}
                     label={"Mobile No."}
                     name={"mobileNo"}
                     bgColor="white"
@@ -142,7 +142,7 @@ const MobileLogin = () => {
                         as={Feather}
                         name={"phone"}
                         ml={3}
-                        color={"darkBlue.300"}
+                        color={"#0f045d"}
                       />
                     }
                     keyboardType={"phone-pad"}
@@ -156,7 +156,7 @@ const MobileLogin = () => {
                         label="Otp"
                         name="otp"
                         w={"72"}
-                        borderColor={"darkBlue.300"}
+                        borderColor={"#0f045d"}
                         placeholder="Enter otp"
                         setFieldValue={setFieldValue}
                         isRequired={true}
@@ -168,7 +168,7 @@ const MobileLogin = () => {
                             as={MaterialCommunityIcons}
                             name={"form-textbox-password"}
                             ml={3}
-                            color={"darkBlue.300"}
+                            color={"#0f045d"}
                           />
                         }
                       />
@@ -179,7 +179,7 @@ const MobileLogin = () => {
                         w={"48"}
                         h={12}
                         alignSelf={"center"}
-                        bgColor={"darkBlue.300"}
+                        bgColor={"#0f045d"}
                         onPress={handleLogin}
                         borderRadius="full"
                         leftIcon={
@@ -202,7 +202,7 @@ const MobileLogin = () => {
                       h={12}
                       mt={2}
                       w={"48"}
-                      bgColor={"darkBlue.300"}
+                      bgColor={"#0f045d"}
                       borderRadius={25}
                       alignSelf={"center"}
                     />
@@ -213,7 +213,7 @@ const MobileLogin = () => {
                     <Link
                       onPress={Email}
                       _text={{
-                        color: "darkBlue.300",
+                        color: "#0f045d",
                         fontWeight: "semibold",
                         fontSize: "16",
                         textDecoration: "none",

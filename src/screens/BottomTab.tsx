@@ -60,7 +60,7 @@ const BottomNavigation = memo((props: any) => {
       navigate("Home");
       setSelected(0);
     }
-    
+
     if (selected === 1 && props.state.index !== 1) {
       // @ts-ignore
       navigate("Reports");
@@ -74,7 +74,7 @@ const BottomNavigation = memo((props: any) => {
         <HStack
           p={1.5}
           mb={2}
-          bg="darkBlue.300"
+          bg="#0f045d"
           alignItems="center"
           borderRadius={"25"}
           w={"95%"}

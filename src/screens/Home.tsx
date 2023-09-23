@@ -74,7 +74,7 @@ const OngoingCard: React.FC<{
         w={"72"}
         shadow={3}
         borderWidth={0.5}
-        borderColor={"darkBlue.300"}
+        borderColor={"#0f045d"}
         style={{ shadowColor: "blue" }}
         borderRadius={"15"}
         bg={"white"}
@@ -143,7 +143,7 @@ const UpcomingCard: React.FC<{
         <Text
           fontWeight={"medium"}
           fontSize={"lg"}
-          color={"darkBlue.300"}
+          color={"#0f045d"}
           alignSelf={"center"}
           textAlign={"center"}
         >
