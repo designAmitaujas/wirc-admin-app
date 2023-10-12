@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from "react";
-
-import Login from "./screens/auth/Login";
-
-import BottomTab from "./screens/BottomTab";
-
-import MobileLogin from "./screens/auth/MobileLogin";
-
-import ProfileScreen from "./screens/profile/ProfileDetails";
-
 import { createStackNavigator } from "@react-navigation/stack";
 import * as SplashScreen from "expo-splash-screen";
+import React from "react";
+import BottomTab from "./screens/BottomTab";
+import Login from "./screens/auth/Login";
+import MobileLogin from "./screens/auth/MobileLogin";
+import ProfileScreen from "./screens/profile/ProfileDetails";
 
 SplashScreen.preventAutoHideAsync();
 
